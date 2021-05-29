@@ -6,7 +6,6 @@ class Game{
     }
 
     play(){
-        console.log(this)
         const square = document.querySelectorAll('.square')
         let timeLeft = document.querySelector('#time-left')
         let score = document.querySelector('#score')
