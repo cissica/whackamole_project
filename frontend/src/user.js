@@ -1,7 +1,7 @@
 class User{
-    constructor(id, name){
+    constructor(id, username){
        
-        this.name = name
+        this.username = username
         this.id = id
     }
 
@@ -13,8 +13,8 @@ class User{
 
     fromForm(){
         // const userForm = document.querySelector('.register')
-        let name = document.getElementById("name").value 
-        this.name = name 
+        let username = document.getElementById("name").value 
+        this.username = username 
         
     }
 

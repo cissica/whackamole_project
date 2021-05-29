@@ -1,4 +1,4 @@
-Const = BASE_URL = "http://127.0.0.1:3000/"
+const BASE_URL = "http://127.0.0.1:3000/"
 
 function storeGameFetch(game){
 fetch(`${BASE_URL}/games`, {
