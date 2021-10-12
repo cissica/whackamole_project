@@ -132,6 +132,8 @@ grid-area: Score-Board;
     padding-left: 28px;
     width: 250px;
     border-radius: 5px; 
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
 }
 
 .Game {

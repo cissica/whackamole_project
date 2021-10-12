@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     scoresButton.addEventListener('click', () =>{
         getGamesFetch();
-
+        scoresButton.disabled = true;
     })
 })
     let user = new User();

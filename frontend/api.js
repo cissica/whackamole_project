@@ -16,6 +16,7 @@ function storeGameFetch(game){
     })
 }
 
+
 function getGamesFetch(){
     fetch(`${BASE_URL}/games`)
         .then(resp => resp.json())
@@ -23,7 +24,8 @@ function getGamesFetch(){
                 let sorted = games.sort((a, b) => {
                     return b.score - a.score
             });
-                sorted.forEach((g) => {
+                scores = sorted.slice(0,16)
+                scores.forEach((g) => {
                     let list = document.querySelector('#scores-list')
                     
                     list.innerHTML +=
