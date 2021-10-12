@@ -1,22 +1,56 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wacka-Mole</title>
     <link rel="stylesheet" href="./main.css">
+    <style>
+        body {
+        background-color: rgb(9, 97, 138);
+        }
+        </style>
 </head>
-<body>
-    <h1>Whack a Mole!</h1>
-    <h1 id="usersname"></h1>
-
-    <h2>Your Score</h2>
-    <h2 id="score">0</h2>
-
-    <h2>Seconds Left:</h2>
-    <h2 id="time-left">30</h2>
-
-    <div class="grid">
+<div class="container">
+    <div class="Main-Heading">
+        <h1>Whack a Mole!</h1>
+    </div>
+    <div class="Menu">
+        <div class="Username">
+        <form id="form1" class="register">
+            <input type="text" id="name" placeholder="Name">
+            <button type="submit" id="registerButton" value="Register">Register</button>
+        </form>
+        </div>
+        <div class="PlayButton">
+        <button id="play-button">Play</button>
+        </div>
+        <div class="Restart-Button">
+        <button id="restart-button">Restart</button><br>
+        </div>
+    </div>
+    <div class="Current-Score">
+        <div class="Score">
+        <h2>Your Score</h2>
+        <h2 id="score">0</h2>
+        </div>
+        <div class="Seconds">
+        <h2>Seconds Left:</h2>
+        <h2 id="time-left">30</h2>
+        </div>
+    </div>
+    <div class="Score-Board">
+        <div class="Board-Button">
+        <button id="scores">Score Board</button>
+        </div>
+        <div class="Scores">
+        <ol id="scores-list">
+                
+        </ol>
+        </div>
+    </div>
+    <div class="Game">
         <div class="square" id="1"></div>
         <div class="square" id="2"></div>
         <div class="square" id="3"></div>
@@ -24,22 +58,19 @@
         <div class="square" id="5"></div>
         <div class="square" id="6"></div>
         <div class="square" id="7"></div>
-        <div class="square" id="8"></div> 
+        <div class="square" id="8"></div>
         <div class="square" id="9"></div>
+            <!-- <div class="square" id="1"></div>
+            <div class="square" id="2"></div>
+            <div class="square" id="3"></div>
+            <div class="square" id="4"></div>
+            <div class="square" id="5"></div>
+            <div class="square" id="6"></div>
+            <div class="square" id="7"></div>
+            <div class="square" id="8"></div> 
+            <div class="square" id="9"></div> -->
     </div>
-     
-    <div class="menu">
-        <form id="form1" class="register">
-            <input type="text" id="name" placeholder="Name">
-            <button type="submit" id="registerButton" value="Register">Register</button>
-        </form>
-        <button id="play-button">Play</button>
-        <button id="restart-button">Restart</button><br>
-        <button id="scores">Score Board</button>
-        <ol id="scores-list">
-            
-        </ol>
-    </div>
+</div>
 
 </body>
 <script src="api.js"></script>

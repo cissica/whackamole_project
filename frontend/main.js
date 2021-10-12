@@ -6,15 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         user.fromForm();
         saveUserFetch(user)   
-        console.log(user)
         playButton.addEventListener('click', () => {
             let game = new Game();
             game.play();
+            playButton.disabled = true
+            console.log(game)
         })
 
         resetButton.addEventListener('click', () =>{
             location.reload();
-            console.log(game)
         })
     })
     scoresButton.addEventListener('click', () =>{

@@ -12,10 +12,8 @@ class User{
     }
 
     fromForm(){
-        // const userForm = document.querySelector('.register')
         let username = document.getElementById("name").value 
         this.username = username 
-        
     }
 
 }

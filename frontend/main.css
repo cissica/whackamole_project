@@ -1,77 +1,160 @@
-.square {
+.container {
+display: grid;
+grid-template-columns: 0.9fr 1.1fr;
+grid-template-rows: 0.5fr 0.7fr 1.7fr;
+gap: 0px 0px;
+grid-auto-flow: row;
+grid-template-areas:
+    "Main-Heading Main-Heading"
+    "Menu Current-Score"
+    "Score-Board Game";
+}
+
+.Main-Heading { 
+    grid-area: Main-Heading; 
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: 26px;
+}
+
+.Menu {
+display: grid;
+grid-template-columns: 0.4fr, 1.2fr 0.9fr;
+grid-template-rows: 1.4fr 0.6fr 1fr;
+gap: 0px 0px;
+grid-auto-flow: row;
+grid-template-areas:
+    ". Username Username"
+    ". PlayButton Restart-Button";
+grid-area: Menu;
+}
+
+.Username { 
+    grid-area: Username; 
+    margin-top: 60px;
+}
+#registerButton{
+    background-color: #000000;
+    border-color: rgb(251, 255, 33);
+    border-radius: 15px;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+
+    input[type=text]{
+    font-family: 'Courier New', monospace;
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(251, 255, 33);
+    border-radius: 15px;
+}
+
+.PlayButton { 
+    grid-area: PlayButton;
+    justify-self: flex-end;
+}
+
+.Restart-Button { 
+    grid-area: Restart-Button;
+    justify-self: flex-start;
+}
+
+#play-button, #restart-button, #scores{
+    background-color: #000000;
+    border-radius: 15px;
+    border-color: rgb(251, 255, 33);
+    color: white;
+    padding: 12px 37px;
+    font-size: large;
+    font-family: 'Courier New', monospace;
+    margin: 4px 4px;
+    cursor: pointer;
+}
+
+
+.Current-Score {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.3fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Score Seconds .";
+    grid-area: Current-Score;
+    font-family: 'Courier New', monospace;
+}
+
+.Score { 
+    grid-area: Score; 
+    text-align: center;   
+    font-size: 20px;
+    margin-top: 80px;
+}
+
+.Seconds { 
+    grid-area: Seconds;
+    text-align: center;   
+    font-size: 20px;
+    margin-top: 80px;
+}
+
+#score, #time-left {
+    color: rgb(251, 255, 33);
+}
+
+.Score-Board {
+display: grid;
+grid-template-columns: 0.4fr, 1fr;
+grid-template-rows: 0.4fr 1.6fr;
+gap: 0px 0px;
+grid-auto-flow: row;
+grid-template-areas:
+    ". Board-Button"
+    ". Scores";
+grid-area: Score-Board;
+}
+
+.Board-Button { 
+    grid-area: Board-Button;
+    align-self: left;
+}
+
+.Scores { 
+    grid-area: Scores;
+    border: 3px solid rgb(251, 255, 33);
+    background-color: gold;
+    padding-right: 100px;
+    padding-left: 28px;
+    width: 250px;
+    border-radius: 5px; 
+}
+
+.Game {
+display: grid;
+grid-template-columns: 1.2fr 1.2fr 1.2fr;
+grid-template-rows: 1fr 1fr 1fr;
+gap: 0px 0px;
+grid-auto-flow: row;
+grid-template-areas:
+    "square square square"
+    "square square square"
+    "square square square";
+grid-area: Game;
+}
+
+.square { 
     width: 200px; 
     height: 200px;
     border-style: solid;
     border-color: black;
- }
- 
- .grid {
-     position: absolute;
-     right: 200px;
-     display: flex;
-     flex-flow: row wrap;
-     justify-content: center;
-     align-content: center;
-     width: 618px;
-     height: 618px;
- }
- 
- .mole {
-     background-image: url(mole.jpg);
-     background-size: cover;
- }
- 
- h1{
-     text-align: center;
-    
- }
- 
- h2{
-     text-align: right;   
-     padding: 0px 190;
-     margin: 1px;
-     margin-bottom: 10px;
- }
- 
- #registerButton{
-     background-color: #000000;
-   border: none;
-   color: white;
-   padding: 12px 20px;
-   text-decoration: none;
-   margin: 4px 2px;
-   cursor: pointer;
- }
- 
- input[type=text]{
- width: 20%;
-   padding: 12px 20px;
-   margin: 8px 0;
-   box-sizing: border-box;
-   border: 2px solid rgb(251, 255, 33);
-   border-radius: 4px;
- }
- 
- #play-button, #restart-button, #scores{
-     background-color: #000000;
-     border: none;
-     color: white;
-     padding: 12px 37px;
-     text-decoration: none;
-     margin: 4px 2px;
-     cursor: pointer;
- }
- 
- .menu{
-     margin-left: 100px;
- }
- 
- #scores-list{
-     border: 3px solid rgb(251, 255, 33);
-     background-color: orange; 
-   padding-right: 100px;
-   padding-left: 28px;
-   width: 250px;
-   border-radius: 5px;
-     
- }
+}
+
+.mole {
+    background-image: url(mole.jpg);
+    background-size: cover;
+}
